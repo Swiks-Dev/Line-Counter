@@ -88,7 +88,7 @@ Examples:
         print(f"  Non-blank lines: {counts['non_blank']}")
         print(f"  Blank lines:     {counts['blank']}")
     else:
-        print(f"{counts['total']}")
+        print(counts['total'])
 
 
 if __name__ == '__main__':
