@@ -73,13 +73,8 @@ Examples:
     
     args = parser.parse_args()
     
-    # Check if file exists
-    if not os.path.exists(args.file):
-        print(f"Error: File '{args.file}' does not exist.", file=sys.stderr)
-        sys.exit(1)
-    
     # Check if it's a file (not a directory)
-    if not os.path.isfile(args.file):
+    if os.path.exists(args.file) and not os.path.isfile(args.file):
         print(f"Error: '{args.file}' is not a file.", file=sys.stderr)
         sys.exit(1)
     
